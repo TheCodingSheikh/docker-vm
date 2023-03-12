@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  my-vm:
+    build: .
+    volumes:
+      - ./data:/home/docker
+    ports:
+      - "22:22"
+    command: /usr/sbin/sshd -D
+    
